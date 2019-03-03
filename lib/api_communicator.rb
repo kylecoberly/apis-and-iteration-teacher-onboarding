@@ -34,7 +34,6 @@ def print_movies(film_names)
   film_names.each {|name|
     puts name
   }
-  # some iteration magic and puts out the movies in a nice list
 end
 
 def show_character_movies(character)
