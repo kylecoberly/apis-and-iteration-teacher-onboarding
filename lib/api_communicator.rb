@@ -21,7 +21,7 @@ end
 
 def print_movies(film_names)
   film_names.each {|name|
-    puts name
+    puts "* #{name}"
   }
 end
 
