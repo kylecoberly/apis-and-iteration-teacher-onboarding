@@ -10,9 +10,8 @@ def get_character_movies_from_api(character)
   films = JSON.parse(film_endpoints.map {|endpoint|
     RestClient.get(endpoint)
   })
-  film_names = films.map {|film|
-    film["results"].first["name"]
-  }
+  get_names_from_endpoints(films)
+
 
   # iterate over the response hash to find the collection of `films` for the given
   #   `character`
