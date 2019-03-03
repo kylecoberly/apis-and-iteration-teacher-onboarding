@@ -6,7 +6,7 @@ def get_character_movies_from_api(character)
   response_string = RestClient.get('http://www.swapi.co/api/people/')
   response_hash = JSON.parse(response_string)
   matching_character = response_hash["results"].find {|response_character|
-    character == response_character["names"].downcase
+    character == response_character["name"].downcase
   }
   film_endpoints = matching_character["films"]
   films = JSON.parse(film_endpoints.map {|endpoint|
