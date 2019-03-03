@@ -1,5 +1,5 @@
 def welcome
-  # puts out a welcome message here!
+  puts "aloha!"
 end
 
 def get_character_from_user
