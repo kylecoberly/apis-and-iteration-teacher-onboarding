@@ -8,7 +8,7 @@ def get_character_movies_from_api(character)
   matching_character = response_hash["results"].find {|response_character|
     character["name"] == response_character["names"].downcase
   }
-  film_endpoints = reponse_hash["results"].first["films"]
+  film_endpoints = matching_character["films"]
   films = JSON.parse(film_endpoints.map {|endpoint|
     RestClient.get(endpoint)
   })
