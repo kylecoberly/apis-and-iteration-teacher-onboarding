@@ -10,7 +10,7 @@ def get_character_movies_from_api(character)
   }
   binding.pry
   film_endpoints = matching_character["films"]
-  
+
   films = JSON.parse(film_endpoints.map {|endpoint|
     RestClient.get(endpoint)
   })
