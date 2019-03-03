@@ -9,6 +9,7 @@ def get_character_movies_from_api(character)
     character == response_character["name"].downcase
   }
   film_endpoints = matching_character["films"]
+  binding.pry
   films = JSON.parse(film_endpoints.map {|endpoint|
     RestClient.get(endpoint)
   })
