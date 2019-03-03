@@ -25,6 +25,12 @@ def get_character_movies_from_api(character)
   #  of movies by title. play around with puts out other info about a given film.
 end
 
+def get_names_from_endpoints(film_endpoints)
+  film_endpoints.map {|film|
+    film["results"].first["name"]
+  }
+end
+
 def print_movies(films_hash)
   # some iteration magic and puts out the movies in a nice list
 end
