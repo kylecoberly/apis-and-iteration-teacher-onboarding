@@ -30,7 +30,10 @@ def get_names_from_endpoints(film_endpoints)
   }
 end
 
-def print_movies(films_hash)
+def print_movies(film_names)
+  film_names.each {|name|
+    puts name
+  }
   # some iteration magic and puts out the movies in a nice list
 end
 
