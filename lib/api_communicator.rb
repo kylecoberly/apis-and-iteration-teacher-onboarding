@@ -26,8 +26,8 @@ def print_movies(film_names)
 end
 
 def show_character_movies(character)
-  films_array = get_character_movies_from_api(character)
-  print_movies(films_array)
+  films_names = get_character_movies_from_api(character)
+  print_movies(films_names)
 end
 
 ## BONUS
